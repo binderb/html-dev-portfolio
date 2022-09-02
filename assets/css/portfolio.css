@@ -1,0 +1,198 @@
+:root {
+  --palette-pink: #ffd9e4;
+  --palette-grapefruit: #ffaea3;
+  --palette-tangerine: #ffdea4;
+  --palette-orangecream: #ffca9a;
+  --palette-sunlight: #ffeba4;
+  --palette-skyblue: #88d5fe;
+  --highlight: #83ffcd;
+  --palette-red: #ff245a;
+  --palette-red-dark: #dd0238;
+  --palette-red-hover: #ff689e;
+  --palette-red-alert: #f3645a;
+  --palette-green: #60b369;
+  --palette-green-hover: #82d57B;
+  --palette-green-highlight: #96ffbecc;
+  --palette-green-rich: #31ae3d;
+  --palette-dark-green: #409147;
+  --palette-blue: #009ee0;
+  --palette-blue-hover: #22BFF2;
+  --palette-blue-highlight: #6bd5ffcc;
+  --palette-orange: #ff7b00;
+  --palette-orange-hover: #ffae00;
+  --palette-orange-highlight: #ffc3a0cc;
+  --palette-purple: #77278b;
+  --dark: #33323d;
+}
+
+/* ----------------------------
+   General Styles
+   ---------------------------- */
+
+body {
+  /* background: linear-gradient(var(--palette-skyblue),var(--highlight)); */
+  font-family: 'Open Sans', Verdana, sans-serif;
+  color: var(--dark);
+}
+
+body p {
+  font-weight:lighter;
+}
+
+/* ----------------------------
+   Header / Top Bar Styles
+   ---------------------------- */
+
+#top-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  background-color: var(--dark);
+}
+
+#name {
+  padding: 10px 15px 10px 50px;
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--dark);
+  background-color: var(--highlight);
+}
+
+.nav-link {
+  position: relative;
+  z-index: 1;
+  margin: 0 30px;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 100;
+  color: var(--highlight);
+}
+
+.nav-link:hover {
+  color: var(--dark);
+  animation-name: nav-hover;
+  animation-duration: 0.2s;
+}
+
+.nav-link::after {
+  position: absolute;
+  z-index: -1;
+  left: 0px;
+  bottom: 0px;
+  display: block;
+  width: 100%;
+  height: 3px;
+  content: '';
+  background-color: var(--highlight);
+}
+
+.nav-link:hover::after {
+  animation-name: nav-hover-after;
+  animation-duration: 0.2s;
+  height: 100%;
+}
+
+@keyframes nav-hover {
+  0%   {
+    color: var(--highlight);
+  }
+  100%  {
+    color: var(--dark);
+  }
+}
+
+@keyframes nav-hover-after {
+  0%   {
+    height: 3px;
+  }
+  100%  {
+    height: 100%;
+  }
+}
+
+/* ----------------------------
+   Header / Banner Styles
+   ---------------------------- */
+
+#banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 200px;
+  background-image: url('../images/biochembanner.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+#avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 300px;
+  margin: -20px;
+  outline: 10px solid var(--dark);
+}
+
+#subtitle {
+  padding: 15px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--dark);
+  background-color: var(--highlight);
+}
+
+/* ----------------------------
+   Main Styles
+   ---------------------------- */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-section {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+  
+aside {
+  position: relative;
+  flex: 1 0 0;
+  font-size: 40px;
+  font-weight: bold;
+  text-align:right;
+  line-height: 1.25;
+  padding-right: 40px;
+}
+
+aside::after {
+  position: absolute;
+  display: block;
+  content: '';
+  top: 0px;
+  right: 20px;
+  width: 3px;
+  height: 100%;
+  background-color: var(--dark);
+
+}
+
+.main-content {
+  flex: 3 0 0;
+  padding-right: 5%;
+}
+
+#about-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
