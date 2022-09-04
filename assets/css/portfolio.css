@@ -78,24 +78,6 @@ body p {
   height: 100%;
 }
 
-@keyframes nav-hover {
-  0%   {
-    color: var(--highlight);
-  }
-  100%  {
-    color: var(--dark);
-  }
-}
-
-@keyframes nav-hover-after {
-  0%   {
-    height: 3px;
-  }
-  100%  {
-    height: 100%;
-  }
-}
-
 /* ----------------------------
    Header / Banner Styles
    ---------------------------- */
@@ -151,8 +133,9 @@ main {
   
 .main-section aside {
   position: relative;
-  flex: 1 0 0;
+  flex: 0.7 0 0;
   font-size: 40px;
+  padding-left: 5%;
   font-weight: bold;
   text-align:right;
   line-height: 1.25;
@@ -176,7 +159,7 @@ main {
   padding-right: 5%;
 }
 
-.main-section .main-content #about-content p {
+.main-section #about-content p {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -251,11 +234,67 @@ main {
   font-size: 14px;
 }
 
+#contact-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-link {
+  position: relative;
+  z-index: 1;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--dark);
+  transition: 0.2s;
+}
+
+.contact-link:hover {
+  transition: 0.2s;
+  color: var(--highlight);
+}
+
+.contact-link::after {
+  position: absolute;
+  z-index: -1;
+  left: 0px;
+  bottom: 0px;
+  display: block;
+  width: 100%;
+  height: 3px;
+  content: '';
+  background-color: var(--dark);
+  transition: 0.2s;
+}
+
+.contact-link:hover::after {
+  transition: 0.2s;
+  height: 100%;
+}
+
 /* ----------------------------
    Media Queries
    ---------------------------- */
 
 @media screen and (max-width: 980px) {
+  #top-bar {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  #name {
+    width: 100%;
+    font-size: 50px;
+    padding: 20px 0 20px 0;
+    text-align: center;
+  }
+
+  nav {
+    padding: 20px 0 20px 0;
+  }
+  
   .main-section {
     flex-direction: column;
     justify-content: flex-start;
@@ -267,6 +306,8 @@ main {
     position: relative;
     text-align: left;
     padding: 0px;
+    margin-bottom: 20px;
+    font-size: 50px;
   }
 
   .main-section aside::after {
@@ -274,12 +315,16 @@ main {
     z-index: -1;
     left: 0px;
     bottom: 0px;
+    top: unset;
     display: block;
     width: 100%;
     height: 3px;
     content: '';
     background-color: var(--dark);
-    transition: 0.2s;
+  }
+
+  .main-section .main-content {
+    padding: 0px;
   }
 
 }
