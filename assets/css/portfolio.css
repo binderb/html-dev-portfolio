@@ -342,6 +342,10 @@ main {
 
 @media screen and (max-width: 768px) {
 
+  .nav-link {
+    font-size: clamp(2vw,4vw,24px);
+  }
+
   #banner {
     position: relative;
     display: flex;
