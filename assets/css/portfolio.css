@@ -22,11 +22,6 @@ body {
   background-color: white;
 }
 
-body p {
-  position: relative;
-  font-weight:normal;
-}
-
 .inline-link {
   padding: 2px 5px;
   text-decoration: none;
@@ -180,8 +175,9 @@ main {
 }
 
 .main-section #about-content p {
+  font-weight: normal;
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.7;
   margin-bottom: 20px;
 }
 
