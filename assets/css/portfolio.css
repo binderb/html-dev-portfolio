@@ -23,7 +23,7 @@ body {
 }
 
 body p {
-  font-weight:lighter;
+  font-weight:normal;
 }
 
 /* ----------------------------
@@ -54,7 +54,7 @@ body p {
   padding: 5px;
   text-decoration: none;
   font-size: 24px;
-  font-weight: 100;
+  font-weight: normal;
   color: var(--highlight);
   transition: 0.2s;
 }
@@ -104,7 +104,7 @@ body p {
   height: 250px;
   border-radius: 300px;
   margin: -20px;
-  outline: 10px solid var(--dark);
+  box-shadow: 0px 0px 0px 10px var(--dark);
 }
 
 #subtitle {
@@ -164,7 +164,7 @@ main {
 }
 
 .main-section #about-content p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
@@ -348,26 +348,16 @@ main {
 
   #banner {
     position: relative;
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 250px;
-    background-image: url('../images/biochembanner.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden;
   }
 
   #avatar {
-    width: 250px;
-    height: 250px;
-    border-radius: 300px;
     margin: 0px;
     margin-top: -30px;
-    outline: 10px solid var(--dark);
   }
   
   #subtitle {
@@ -375,7 +365,7 @@ main {
     bottom: -10px;
     padding: 15px;
     margin-right: 0px;
-    font-size:24px;
+    font-size: clamp(10px, 6vw, 24px);
     font-weight: bold;
     color: var(--dark);
     background-color: var(--highlight);
