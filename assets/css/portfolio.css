@@ -23,7 +23,23 @@ body {
 }
 
 body p {
+  position: relative;
   font-weight:normal;
+}
+
+.inline-link {
+  padding: 2px 5px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--dark);
+  background-color: #FFFFFF44;
+  transition: 0.2s;
+}
+
+.inline-link:hover {
+  color: var(--highlight);
+  background-color: var(--dark);
+  transition: 0.2s;
 }
 
 /* ----------------------------
