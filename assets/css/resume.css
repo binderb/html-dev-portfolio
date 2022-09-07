@@ -1,0 +1,86 @@
+/* ----------------------------
+   Resume Styles
+   ---------------------------- */
+
+ul {
+  list-style: square;
+  line-height: 1.75;
+  margin: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.experience-box, .education-box, .award-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.experience-box {
+  margin-bottom: 50px;
+}
+
+.experience-item-header, .education-item-header, .award-item-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.experience-item-name, .experience-item-years, 
+.education-item-name, .education-item-year, 
+.award-item-name, .award-item-year {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.experience-item-years, .education-item-year, .award-item-year {
+  text-align: right;
+}
+
+.experience-item-location, .education-item-location, .award-item-location {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.experience-item-content {
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 980px) {
+  
+  .nav-link {
+    font-size: clamp(1vw,2vw,24px);
+    margin: 0 5px;
+  }
+
+  .nav-link:last-of-type {
+    margin-right: 10px;
+  }
+
+}
+
+@media screen and (max-width: 980px) {
+  
+  .nav-link {
+    font-size: clamp(1vw,2.5vw,24px);
+    /* margin: 0 10px; */
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  
+  .nav-link {
+    font-size: clamp(1vw,2.5vw,24px);
+    margin: 0 5px;
+  }
+
+  #avatar {
+    margin-top: -5px;
+    bottom: 0px;
+  }
+
+}
