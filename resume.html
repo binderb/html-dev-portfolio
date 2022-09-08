@@ -14,24 +14,32 @@
   <title>Ben Binder | Resume</title>
 </head>
 <body>
+  <!-- The header contains a name, two nav bars, and banner featuring a 
+  subtitle and a photo. -->
   <header>
       <section id="top-bar">
           <h1 id="name">
               Ben Binder, Ph.D.
           </h1>
           <nav>
-              <a class="nav-link" href="#core-skills">Core Skills</a>
-              <a class="nav-link" href="#experience">Experience</a>
-              <a class="nav-link" href="#education">Education</a>
-              <a class="nav-link" href="#awards">Awards</a>
-              <a class="nav-link" href="index.html">Portfolio</a>
+              <a class="nav-link" href="index.html">Back to Portfolio</a>
           </nav>
       </section>
+      <section id="banner">
+        <img id="avatar" alt="A photo of Ben Binder." src="./assets/images/binder_dev_square_600x600.png" />
+        <div id="subtitle">// educator / designer / dev</div>
+      </section>
+      <nav id="resume-nav">
+        <a class="nav-link" href="#core-skills">Core Skills</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#education">Education</a>
+        <a class="nav-link" href="#awards">Awards</a>
+      </nav>
   </header>
+  <!-- The main section contains all parts of the resume, including
+  "Core Skills", "Experience", "Education", and "Awards" -->
   <main>
-    <section id="banner">
-      <img id="avatar" src="./assets/images/binder_dev_square_600x600.png" />
-    </section>
+    <!-- Core Skills -->
     <section class="main-section" id="core-skills">
         <h2>Core Skills</h2>
         <div class="main-content" id="core-skills-content">
@@ -43,7 +51,7 @@
               <strong>Extremely strong record of student engagement</strong> across a wide range of learning requirements
             </li>
             <li>
-              <strong>Extensive experience creating educational content</strong> using HTML/CSS, JavaScript, MySQL, Unity, PowerPoint, and the Adobe Creative Suite
+              <strong>Experience creating educational content</strong> using HTML/CSS, JavaScript, MySQL, Unity, PowerPoint, and the Adobe Creative Suite
             </li>
             <li>
               <strong>Seasoned developer of interactive, mobile-friendly</strong> online games and assessment tools
@@ -54,6 +62,7 @@
           </ul>
         </div>
     </section>
+    <!-- Experience -->
     <section class="main-section" id="experience">
       <h2>Experience</h2>
       <div class="main-content" id="experience-content">
@@ -118,6 +127,7 @@
         </div>
       </div>
     </section>
+    <!-- Education -->
     <section class="main-section" id="education">
       <h2>Education</h2>
       <div class="main-content" id="experience-content">
@@ -141,13 +151,14 @@
         </div>
       </div>
     </section>
+    <!-- Awards -->
     <section class="main-section" id="awards">
       <h2>Awards</h2>
       <div class="main-content" id="awards-content">
         <div class="award-box">
           <div class="award-item-header">
             <div class="award-item-name">
-              UMN Coding Bootcamp Certificate
+              UofM Coding Bootcamp Certificate
               <div class="award-item-location">University of Minnesota, Twin Cities</div>
             </div>
             <div class="award-item-year"><span style="font-style: italic;">Expected Feb 2023</span></div>

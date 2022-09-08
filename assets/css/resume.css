@@ -2,6 +2,15 @@
    Resume Styles
    ---------------------------- */
 
+#resume-nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  background-color: var(--dark);
+}
+
 ul {
   list-style: square;
   line-height: 1.75;
@@ -37,12 +46,14 @@ li {
 
 .experience-item-years, .education-item-year, .award-item-year {
   text-align: right;
+  padding-left: 50px;
 }
 
 .experience-item-location, .education-item-location, .award-item-location {
   display: block;
   font-size: 14px;
   font-weight: normal;
+  margin-top: 10px;
 }
 
 .experience-item-content {
@@ -52,7 +63,7 @@ li {
 @media screen and (min-width: 980px) {
   
   .nav-link {
-    font-size: clamp(1vw,2vw,24px);
+    /* font-size: clamp(1vw,2vw,24px); */
     margin: 0 5px;
   }
 
@@ -65,7 +76,7 @@ li {
 @media screen and (max-width: 980px) {
   
   .nav-link {
-    font-size: clamp(1vw,2.5vw,24px);
+    font-size: clamp(1vw,3.5vw,24px);
     /* margin: 0 10px; */
   }
 
@@ -74,13 +85,13 @@ li {
 @media screen and (max-width: 768px) {
   
   .nav-link {
-    font-size: clamp(1vw,2.5vw,24px);
+    font-size: clamp(1vw,3.5vw,24px);
     margin: 0 5px;
   }
 
-  #avatar {
+  /* #avatar {
     margin-top: -5px;
     bottom: 0px;
-  }
+  } */
 
 }
