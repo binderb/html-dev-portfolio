@@ -3,6 +3,7 @@
   --seafoam: #83ffcd;
   --highlight: #83ffcd;
   --dark: #33323d;
+  --dark-highlight: #716f88;
   --dark-mask: #33323d44;
   --dark-mask-clear: #33323d00;
 }
@@ -257,6 +258,9 @@ main {
 
 .contact-link {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
   padding: 5px;
   margin-top: 20px;
@@ -270,10 +274,14 @@ main {
 
 .contact-link:hover {
   transition: 0.2s;
-  color: var(--highlight);
+  color: var(--dark-highlight);
 }
 
-.contact-link::after {
+.contact-link-text {
+  padding-left: 10px;
+}
+
+/* .contact-link::after {
   position: absolute;
   z-index: -1;
   left: 0px;
@@ -284,12 +292,12 @@ main {
   content: '';
   background-color: var(--dark);
   transition: 0.2s;
-}
+} */
 
-.contact-link:hover::after {
+/* .contact-link:hover::after {
   transition: 0.2s;
   height: 100%;
-}
+} */
 
 /* ----------------------------
    Media Queries
@@ -329,14 +337,14 @@ main {
     text-align: left;
     padding: 0px;
     margin-bottom: 20px;
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .main-section h2::after {
     position: absolute;
     z-index: 0;
     left: 0px;
-    bottom: 0px;
+    bottom: -10px;
     top: unset;
     display: block;
     width: 100%;
@@ -399,9 +407,7 @@ main {
 
   #contact-content {
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
   }
 
   .contact-link {
@@ -416,6 +422,8 @@ main {
     transition: 0.2s;
   }
 
-
+  .contact-link-text {
+    display: none;
+  }
 
 }
